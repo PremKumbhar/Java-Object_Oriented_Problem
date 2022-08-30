@@ -8,6 +8,8 @@ public class StockMarket {
 	ArrayList<Integer> numberOfShare = new ArrayList<Integer>();
 	ArrayList<Integer> sharePrice = new ArrayList<Integer>();
 	Scanner sc = new Scanner(System.in);
+	int balance = 1000; // inital account balance
+
 	
 	public void addStock() {
 		System.out.println("Enter the Stock Name : ");
@@ -26,6 +28,16 @@ public class StockMarket {
 			System.out.println("Stock Name =" +stockName.get(i) + "\nValue of each share =" +sharePrice.get(i) 
 								+"\nTotal value of share =" +total);
 		}
+	}
+	public void debit() {
+		System.out.println("Enter the amount you want to withdraw: ");
+		int withdraw = sc.nextInt();
+		if (withdraw < balance) {
+			balance = balance - withdraw;
+			System.out.println("Debit is succesful of amount :" + withdraw);
+			System.out.println("Total amount left after withdrawal= " + balance);
+		} else
+			System.out.println("Debit amount exceeded account balance");
 	}
 	
 
