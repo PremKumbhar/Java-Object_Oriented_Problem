@@ -58,7 +58,9 @@ public class DeckOfCards
 	}
 
 	public static void main(String[] args) {
+		//Create Object
 		DeckOfCards deckOfCards = new DeckOfCards();
+		//Calling the method
 		deckOfCards.alignCards();
 		String[] deck = deckOfCards.suffleCards();
 		deckOfCards.displayCards(deck);
